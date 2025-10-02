@@ -11,3 +11,4 @@ for i in range(len(nums)-2):
         print(a + b + c)
         break
 print(0)
+#2342
