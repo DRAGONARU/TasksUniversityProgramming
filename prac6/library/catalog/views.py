@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-class book:
+class Book:
     '''
     Создаём класс книга
     У него есть атрибуты: название, автор, год
@@ -10,7 +10,7 @@ class book:
         self.author = author
         self.year = year
 
-book_1 = book('Мастер и Маргарита', 'Михаил Булгаков', '1966')
+book_1 = Book('Мастер и Маргарита', 'Михаил Булгаков', '1966')
 
 def books_detail(request):
     '''
@@ -21,5 +21,6 @@ def books_detail(request):
         'author' : book_1.author,
         'year' : book_1.year
     }
+
 
     return render(request, 'catalog/books_detail.html', {'books_detail': book_info})
