@@ -1,5 +1,8 @@
 import random
 def game():
+    '''
+    Функция для игры в виселицу, очень весёлая игра.
+    '''
     input('Нажмите Enter для начала игры')
     answer = random.choice(words)
     right_guessed = []
