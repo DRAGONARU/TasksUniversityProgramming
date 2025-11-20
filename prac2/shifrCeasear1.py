@@ -1,4 +1,8 @@
 def shifrCeasearCode(text, lang):
+    '''
+    Функция для кодирования текста шифром цезаря.
+    Получает на вод текст и язык текста, возвращает закодированный текст.
+    '''
     if lang == 'eng':
         return ''.join([eng_letters_code[letter] for letter in text])
     elif lang == 'rus':
@@ -6,12 +10,20 @@ def shifrCeasearCode(text, lang):
 
 
 def shifrCeasearDecode(text, lang):
+    '''
+    Функция для декодирования текста шифром цезаря.
+    Получает на вод текст и язык текста, возвращает декодированный текст.
+    '''
     if lang == 'eng':
         return ''.join([eng_letters_decode[letter] for letter in text])
     elif lang == 'rus':
         return ''.join([rus_letters_decode[letter] for letter in text])
 
 def langCheck(text):
+    '''
+    Определяет язык текста.
+    Получает на вход текст, возвращает язык текста.
+    '''
     if text[0] in eng_letters_code:
         return 'eng'
     else:
