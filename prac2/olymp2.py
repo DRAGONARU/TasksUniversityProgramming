@@ -1,4 +1,8 @@
 def quicksort(arr):
+    '''
+    Функция быстрой сортировки массива.
+    Получает на вход массив, возвращает отсортированный массив. 
+    '''
     if len(arr) <= 1:
         return arr
     else:
@@ -9,6 +13,10 @@ def quicksort(arr):
 
 
 def check_winners(scores, student_score):
+    '''
+    Функция, что проверяет, находится ли человек в тройке победителей.
+    Получает на вход массив с кол-ом очков и количество очков конкретного человека, печатает строку.
+    '''
     scores = quicksort(scores)
     if student_score == scores[-1] or student_score == scores[-2] or student_score == scores[-3]:
         print("Вы в тройке победителей!")
